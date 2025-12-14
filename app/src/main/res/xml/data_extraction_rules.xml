@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data-extraction-rules>
+    <cloud-backup>
+        <!--
+        See https://developer.android.com/guide/topics/data/autobackup
+        for more information about backup rules.
+        -->
+        <include domain="sharedpref" path="."/>
+        <exclude domain="sharedpref" path="device.xml"/>
+    </cloud-backup>
+    <!--
+    Device transfers are available from Android 12 (API level 31) onwards.
+    See https://developer.android.com/about/versions/12/backup-restore
+    -->
+    <device-transfer>
+        <include domain="sharedpref" path="."/>
+        <exclude domain="sharedpref" path="device.xml"/>
+    </device-transfer>
+</data-extraction-rules>
